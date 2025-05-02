@@ -1,7 +1,14 @@
 import Link from 'next/link'
 import styles from './Service.module.css'
 
-export default async function Service({ params }: { params: { service: string } }) {
+interface PageProps {
+  params: Promise<{
+    service: string
+  }>
+}
+
+export default async function Service({ params }: PageProps) {
+  const resolvedParams = await params
   const services = {
     'engine': {
       title: 'Ремонт двигателя',
@@ -45,7 +52,7 @@ export default async function Service({ params }: { params: { service: string } 
     }
   }
 
-  const service = services[params.service as keyof typeof services]
+  const service = services[resolvedParams.service as keyof typeof services]
 
   if (!service) {
     return (

@@ -6,7 +6,6 @@
 
 - Next.js 14
 - TypeScript
-- Tailwind CSS
 - React 18
 
 ## Установка
