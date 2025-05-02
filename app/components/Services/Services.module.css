@@ -26,7 +26,7 @@
 .card {
   background: #222222;
   border-radius: 10px;
-  padding: 30px;
+  padding: 27px;
   text-decoration: none;
   transition: transform 0.3s ease;
   text-align: center;
@@ -38,11 +38,13 @@
 }
 
 .image {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  width: 72px;
+  height: 72px;
 }
 
 .cardTitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #CCCCCC;
   white-space: pre-line;

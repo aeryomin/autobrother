@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './Service.module.css'
 
-export default function Service({ params }: { params: { service: string } }) {
+export default async function Service({ params }: { params: { service: string } }) {
   const services = {
     'engine': {
       title: 'Ремонт двигателя',
