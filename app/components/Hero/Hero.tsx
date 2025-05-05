@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -6,10 +7,11 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.background}>
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/bg-image_02.png"
           alt="Фон автосервиса"
           fill
           priority
+          className="object-cover"
         />
         <div className={styles.overlay}></div>
       </div>
@@ -19,9 +21,15 @@ export default function Hero() {
         <h1 className={styles.title}>
           <span className={styles.textAppear}>« ПОЧИНИМ</span> КАК РОДНОГО »
         </h1>
-        <a href="#services" className={styles.button}>
-          УЗНАТЬ БОЛЬШЕ
-        </a>
+        <div className={styles.buttons}>
+          <a href="#services" className={styles.desktopButton}>
+            УЗНАТЬ БОЛЬШЕ
+          </a>
+          <Link href="/booking" className={styles.mobileButton}>
+            <i className={`fas fa-calendar-alt ${styles.bookingIcon}`}></i>
+            Запись онлайн
+          </Link>
+        </div>
       </div>
     </section>
   )

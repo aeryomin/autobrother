@@ -47,7 +47,7 @@ export default function Services() {
   ]
 
   return (
-    <section className={styles.services}>
+    <section id="services" className={styles.services}>
       <div className={styles.container}>
         <h2 className={styles.title}>НАШИ УСЛУГИ</h2>
         <div className={styles.grid}>

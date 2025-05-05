@@ -40,7 +40,7 @@
   font-weight: 700;
   color: #FF4500;
   white-space: nowrap;
-  margin-right: 6rem;
+  margin-right: 4rem;
   letter-spacing: 1px;
 }
 
@@ -135,6 +135,7 @@
   transition: all 0.3s ease;
   text-decoration: none;
   margin-left: 2rem;
+  white-space: nowrap;
 }
 
 .bookingButton:hover {
