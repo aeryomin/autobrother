@@ -8,11 +8,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #B0B0B0;
   background-color: #111111;
+  min-width: 320px;
 }
 
 /* Animations */

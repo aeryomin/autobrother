@@ -3,10 +3,11 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Services from './components/Services/Services'
 import Advantages from './components/Advantages/Advantages'
+import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#111111] text-[#B0B0B0]">
+    <main className={styles.main}>
       <Header />
       <Hero />
       <Services />

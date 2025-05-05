@@ -1,0 +1,14 @@
+.main {
+  min-height: 100vh;
+  background-color: #111111;
+  color: #B0B0B0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.main > * {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+} 

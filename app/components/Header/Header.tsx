@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Header.module.css'
+import MobileMenu from './MobileMenu'
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.content}>
+          <MobileMenu />
           <div className={styles.logo}>
             <Image 
               src="/images/logo.svg" 
@@ -18,7 +20,7 @@ export default function Header() {
             <span>АвтоБрат</span>
           </div>
           
-          <div className={styles.contacts}>
+          <div className={styles.desktopContacts}>
             <div className={styles.contactItem}>
               <i className={`fas fa-map-marker-alt ${styles.icon}`}></i>
               <span className={styles.text}>г. Рыбинск, поселок Костино, 109</span>
@@ -33,7 +35,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className={styles.search}>
+          <div className={styles.desktopSearch}>
             <div className={styles.searchContainer}>
               <input 
                 type="text" 
