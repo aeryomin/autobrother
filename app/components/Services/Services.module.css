@@ -1,6 +1,7 @@
 .services {
   background-color: #1a1a1a;
   padding: 80px 0;
+  font-family: 'Arial', sans-serif;
 }
 
 .container {
@@ -11,10 +12,12 @@
 
 .title {
   text-align: center;
-  font-size: 36px;
+  font-family: var(--font-bebas-neue), 'Bebas Neue', cursive;
+  font-size: 48px;
   font-weight: 700;
   margin-bottom: 40px;
   color: #FF4500;
+  letter-spacing: 1px;
 }
 
 .grid {
@@ -44,6 +47,7 @@
 }
 
 .cardTitle {
+  font-family: 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #CCCCCC;
@@ -51,6 +55,7 @@
 }
 
 .cardDescription {
+  font-family: 'Arial', sans-serif;
   font-size: 16px;
   color: #B0B0B0;
   line-height: 1.5;
@@ -68,7 +73,7 @@
   }
 
   .title {
-    font-size: 32px;
+    font-size: 48px;
   }
 }
 
@@ -78,7 +83,7 @@
   }
 
   .title {
-    font-size: 28px;
+    font-size: 42px;
     margin-bottom: 30px;
   }
 
@@ -107,7 +112,7 @@
   }
 
   .title {
-    font-size: 24px;
+    font-size: 38px;
     margin-bottom: 20px;
   }
 
