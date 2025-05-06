@@ -7,7 +7,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.background}>
         <Image
-          src="/images/bg-image_02.png"
+          src="/images/bg-image_03.png"
           alt="Фон автосервиса"
           fill
           priority
