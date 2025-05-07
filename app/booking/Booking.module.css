@@ -128,4 +128,36 @@
 .input[type="time"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
+}
+
+.successMessage,
+.errorMessage {
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.successMessage {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+}
+
+.errorMessage {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid #F44336;
+  color: #F44336;
+}
+
+.submitButton:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButton:disabled:hover {
+  background-color: #666;
+  transform: none;
 } 
