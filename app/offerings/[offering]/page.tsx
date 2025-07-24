@@ -1,18 +1,18 @@
 import Link from 'next/link'
-import styles from './Service.module.css'
-import { getServiceById } from '@/app/data/services'
+import styles from './Offerings.module.css'
+import { getOfferingById } from '@/app/data/offerings'
 
 interface PageProps {
   params: Promise<{
-    service: string
+    offering: string
   }>
 }
 
-export default async function Service({ params }: PageProps) {
+export default async function Offerings({ params }: PageProps) {
   const resolvedParams = await params
-  const service = getServiceById(resolvedParams.service)
+  const offering = getOfferingById(resolvedParams.offering)
 
-  if (!service) {
+  if (!offering) {
     return (
       <main className={styles.main}>
         <div className={styles.container}>
@@ -25,11 +25,11 @@ export default async function Service({ params }: PageProps) {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className={styles.title}>{service.title}</h1>
+        <h1 className={styles.title}>{offering.title}</h1>
         <div className={styles.content}>
           <div className={styles.description}>
-            <p>{service.description}</p>
-            <div className={styles.price}>Стоимость: {service.price}</div>
+            <p>{offering.description}</p>
+            <div className={styles.price}>Стоимость: {offering.price}</div>
           </div>
           <div className={styles.actions}>
             <Link href="/booking" className={styles.bookButton}>

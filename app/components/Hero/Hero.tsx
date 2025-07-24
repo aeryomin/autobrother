@@ -22,7 +22,7 @@ export default function Hero() {
           <span className={styles.textAppear}>« ПОЧИНИМ</span> КАК РОДНОГО »
         </h1>
         <div className={styles.buttons}>
-          <a href="#services" className={styles.desktopButton}>
+          <a href="#offerings" className={styles.desktopButton}>
             УЗНАТЬ БОЛЬШЕ
           </a>
           <Link href="/booking" className={styles.mobileButton}>

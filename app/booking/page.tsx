@@ -3,6 +3,9 @@
 import Link from 'next/link'
 import { useState, useRef, FormEvent } from 'react'
 import styles from './Booking.module.css'
+import Popup from '../components/shared/Popup/Popup'
+import { formatPhone } from '../utils/formatPhone'
+import { postBookingRequest } from '../services/booking'
 
 export default function Booking() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -10,20 +13,6 @@ export default function Booking() {
   const [errorMessage, setErrorMessage] = useState('')
   const [phone, setPhone] = useState('+7 ')
   const inputRef = useRef<HTMLInputElement>(null)
-
-  // Маска для телефона
-  const formatPhone = (value: string) => {
-    let digits = value.replace(/\D/g, '')
-    if (digits.startsWith('8')) digits = '7' + digits.slice(1)
-    if (!digits.startsWith('7')) digits = '7' + digits
-    let result = '+7 '
-    if (digits.length > 1) result += '(' + digits.slice(1, 4)
-    if (digits.length >= 4) result += ') '
-    if (digits.length >= 4) result += digits.slice(4, 7)
-    if (digits.length >= 7) result += '-' + digits.slice(7, 9)
-    if (digits.length >= 9) result += '-' + digits.slice(9, 11)
-    return result.trim()
-  }
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rawValue = e.target.value;
@@ -55,23 +44,12 @@ export default function Booking() {
     }
 
     try {
-      const response = await fetch('/api/booking', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-
-      const result = await response.json()
-
+      const { response, result } = await postBookingRequest(data)
       if (!response.ok) {
-        // Показываем детальное сообщение об ошибке
         setErrorMessage(result.error || 'Произошла ошибка при отправке заявки')
         setSubmitStatus('error')
         return
       }
-
       setSubmitStatus('success')
       form.reset()
       setPhone('+7 ')
@@ -88,11 +66,27 @@ export default function Booking() {
     <main className={styles.main}>
       <div className={styles.container}>
         <h1 className={styles.title}>Запись в автосервис</h1>
-        {submitStatus === 'success' && (
-          <div className={styles.successMessage}>
-            Спасибо за заявку! Мы свяжемся с вами в ближайшее время для подтверждения записи.
+        {/* Popup для успешной отправки */}
+        <Popup open={submitStatus === 'success'} onClose={() => setSubmitStatus('idle')}>
+          <div style={{ fontSize: 20, marginBottom: 16 }}>
+            Спасибо за заявку!<br />Мы свяжемся с вами в ближайшее время для подтверждения записи.
           </div>
-        )}
+          <button
+            onClick={() => setSubmitStatus('idle')}
+            style={{
+              background: '#222',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 6,
+              padding: '10px 24px',
+              fontSize: 16,
+              cursor: 'pointer',
+            }}
+          >
+            Ок
+          </button>
+        </Popup>
+        {/* ОШИБКА */}
         {submitStatus === 'error' && (
           <div className={styles.errorMessage}>
             {errorMessage || 'Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.'}
