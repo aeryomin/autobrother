@@ -1,23 +1,52 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, FormEvent } from 'react'
+import { useState, useRef, FormEvent } from 'react'
 import styles from './Booking.module.css'
 
 export default function Booking() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+  const [phone, setPhone] = useState('+7 ')
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  // Маска для телефона
+  const formatPhone = (value: string) => {
+    let digits = value.replace(/\D/g, '')
+    if (digits.startsWith('8')) digits = '7' + digits.slice(1)
+    if (!digits.startsWith('7')) digits = '7' + digits
+    let result = '+7 '
+    if (digits.length > 1) result += '(' + digits.slice(1, 4)
+    if (digits.length >= 4) result += ') '
+    if (digits.length >= 4) result += digits.slice(4, 7)
+    if (digits.length >= 7) result += '-' + digits.slice(7, 9)
+    if (digits.length >= 9) result += '-' + digits.slice(9, 11)
+    return result.trim()
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawValue = e.target.value;
+    const formatted = formatPhone(rawValue);
+    setPhone(formatted);
+    setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.setSelectionRange(formatted.length, formatted.length);
+      }
+    }, 0);
+  }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+    setErrorMessage('')
 
     const form = e.currentTarget
     const formData = new FormData(form)
     const data = {
       name: formData.get('name'),
-      phone: formData.get('phone'),
+      phone: phone, // используем отформатированный номер
       car: formData.get('car'),
       service: formData.get('service'),
       date: formData.get('date'),
@@ -34,14 +63,21 @@ export default function Booking() {
         body: JSON.stringify(data),
       })
 
+      const result = await response.json()
+
       if (!response.ok) {
-        throw new Error('Failed to submit booking')
+        // Показываем детальное сообщение об ошибке
+        setErrorMessage(result.error || 'Произошла ошибка при отправке заявки')
+        setSubmitStatus('error')
+        return
       }
 
       setSubmitStatus('success')
       form.reset()
+      setPhone('+7 ')
     } catch (error) {
       console.error('Error submitting booking:', error)
+      setErrorMessage('Ошибка сети. Проверьте подключение к интернету.')
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -59,7 +95,7 @@ export default function Booking() {
         )}
         {submitStatus === 'error' && (
           <div className={styles.errorMessage}>
-            Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.
+            {errorMessage || 'Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.'}
           </div>
         )}
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -78,11 +114,14 @@ export default function Booking() {
           <div className={styles.formGroup}>
             <label htmlFor="phone" className={styles.label}>Номер телефона</label>
             <input 
+              ref={inputRef}
               type="tel" 
               id="phone" 
               name="phone"
               className={styles.input}
               placeholder="+7 (999) 123-45-67"
+              value={phone}
+              onChange={handlePhoneChange}
               required
             />
           </div>
@@ -121,6 +160,7 @@ export default function Booking() {
               id="date" 
               name="date"
               className={styles.input}
+              min={new Date().toISOString().split('T')[0]}
               required
             />
           </div>
@@ -132,6 +172,8 @@ export default function Booking() {
               id="time" 
               name="time"
               className={styles.input}
+              min="09:00"
+              max="21:00"
               required
             />
           </div>
