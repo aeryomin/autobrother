@@ -1,4 +1,4 @@
-export interface Service {
+export interface Offering {
   id: string
   title: string
   shortTitle: string
@@ -7,7 +7,7 @@ export interface Service {
   price: string
 }
 
-export const services: Service[] = [
+export const offerings: Offering[] = [
   {
     id: 'engine',
     title: 'Ремонт двигателя',
@@ -74,6 +74,6 @@ export const services: Service[] = [
   }
 ]
 
-export function getServiceById(id: string): Service | undefined {
-  return services.find(service => service.id === id)
+export function getOfferingById(id: string): Offering | undefined {
+  return offerings.find(offering => offering.id === id)
 } 
