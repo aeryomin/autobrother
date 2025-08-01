@@ -1,6 +1,6 @@
 .main {
   min-height: 100vh;
-  background-color: #1a1a1a;
+  background-color: var(--color-bg-services);
   padding: 120px 0 80px;
 }
 
@@ -15,14 +15,14 @@
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #FF4500;
+  color: var(--color-primary);
 }
 
 .form {
-  background-color: #222222;
+  background-color: var(--color-bg-cards);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px var(--shadow-light);
 }
 
 .formGroup {
@@ -34,7 +34,7 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #CCCCCC;
+  color: var(--color-gray-light);
 }
 
 .input,
@@ -42,10 +42,10 @@
 .textarea {
   width: 100%;
   padding: 12px 16px;
-  background-color: #1a1a1a;
-  border: 1px solid #333;
+  background-color: var(--color-bg-search);
+  border: 1px solid var(--color-gray-darkest);
   border-radius: 8px;
-  color: #FFFFFF;
+  color: var(--color-white);
   font-size: 16px;
   transition: border-color 0.3s ease;
 }
@@ -54,7 +54,7 @@
 .select:focus,
 .textarea:focus {
   outline: none;
-  border-color: #FF4500;
+  border-color: var(--color-primary);
 }
 
 .select {
@@ -82,8 +82,8 @@
   align-items: center;
   gap: 8px;
   padding: 16px 24px;
-  background-color: #333;
-  color: white;
+  background-color: var(--color-gray-darkest);
+  color: var(--color-white);
   border: none;
   border-radius: 8px;
   font-size: 18px;
@@ -94,7 +94,7 @@
 }
 
 .backButton:hover {
-  background-color: #444;
+  background-color: var(--color-gray-darker);
   transform: translateY(-2px);
 }
 
@@ -105,8 +105,8 @@
 .submitButton {
   flex: 1;
   padding: 16px;
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border: none;
   border-radius: 8px;
   font-size: 18px;
@@ -116,7 +116,7 @@
 }
 
 .submitButton:hover {
-  background-color: #FF5722;
+  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
 }
 
@@ -140,24 +140,24 @@
 }
 
 .successMessage {
-  background-color: rgba(76, 175, 80, 0.1);
-  border: 1px solid #4CAF50;
-  color: #4CAF50;
+  background-color: var(--color-success-bg);
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
 }
 
 .errorMessage {
-  background-color: rgba(244, 67, 54, 0.1);
-  border: 1px solid #F44336;
-  color: #F44336;
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
 }
 
 .submitButton:disabled {
-  background-color: #666;
+  background-color: var(--color-gray-dark);
   cursor: not-allowed;
   transform: none;
 }
 
 .submitButton:disabled:hover {
-  background-color: #666;
+  background-color: var(--color-gray-dark);
   transform: none;
 } 

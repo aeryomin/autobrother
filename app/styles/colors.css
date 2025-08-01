@@ -1,0 +1,41 @@
+:root {
+  /* Основные цвета */
+  --color-primary: #FF4500;
+  --color-primary-hover: #FF5722;
+  
+  /* Серые оттенки */
+  --color-gray-light: #CCCCCC;
+  --color-gray: #B0B0B0;
+  --color-gray-dark: #666;
+  --color-gray-darker: #444;
+  --color-gray-darkest: #333;
+  --color-text-dark: #333333;
+  
+  /* Фоны */
+  --color-bg-main: #111111;
+  /* --color-bg-header: #151515; */
+  --color-bg-header: #303030;
+  --color-bg-services: #1a1a1a;
+  --color-bg-advantages: #151515;
+  --color-bg-cards: #222222;
+  --color-bg-cards-light: #f8f8f8;
+  --color-bg-search: #1a1a1a;
+  
+  /* Тени */
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --shadow-heavy: rgba(0, 0, 0, 0.15);
+  
+  /* Прозрачность */
+  --overlay-light: rgba(0, 0, 0, 0.4);
+  --overlay-medium: rgba(0, 0, 0, 0.6);
+  
+  /* Успех и ошибки */
+  --color-success: #4CAF50;
+  --color-error: #F44336;
+  --color-success-bg: rgba(76, 175, 80, 0.1);
+  --color-error-bg: rgba(244, 67, 54, 0.1);
+  
+  /* Белый */
+  --color-white: #FFFFFF;
+} 

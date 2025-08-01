@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import './styles/colors.css';
 
 /* Reset and base styles */
 * {
@@ -17,8 +18,8 @@ html, body {
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #B0B0B0;
-  background-color: #111111;
+  color: var(--color-gray);
+  background-color: var(--color-bg-main);
   min-width: 320px;
 }
 

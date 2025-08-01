@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.4);
+  background: var(--overlay-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,12 +12,12 @@
 }
 
 .popup {
-  background: #fff;
+  background: var(--color-white);
   border-radius: 12px;
   padding: 32px 24px;
   min-width: 320px;
   max-width: 90vw;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 32px var(--shadow-heavy);
   text-align: center;
   position: relative;
 }
