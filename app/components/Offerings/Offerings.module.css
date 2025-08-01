@@ -1,5 +1,5 @@
 .services {
-  background-color: #1a1a1a;
+  background-color: var(--color-bg-services);
   padding: 80px 0;
   font-family: 'Arial', sans-serif;
 }
@@ -16,7 +16,7 @@
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #FF4500;
+  color: var(--color-primary);
   letter-spacing: 1px;
 }
 
@@ -27,13 +27,13 @@
 }
 
 .card {
-  background: #222222;
+  background: var(--color-bg-cards-light);
   border-radius: 10px;
   padding: 27px;
   text-decoration: none;
   transition: transform 0.3s ease;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px var(--shadow-medium);
 }
 
 .card:hover {
@@ -46,18 +46,22 @@
   height: 72px;
 }
 
+/* .image:hover {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(119%) brightness(1.1);
+} */
+
 .cardTitle {
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #CCCCCC;
+  color: var(--color-text-dark);
   white-space: pre-line;
 }
 
 .cardDescription {
   font-family: 'Arial', sans-serif;
   font-size: 16px;
-  color: #B0B0B0;
+  color: var(--color-gray-dark);
   line-height: 1.5;
 }
 

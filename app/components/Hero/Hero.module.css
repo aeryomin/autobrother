@@ -107,7 +107,7 @@
 
 .subtitle {
   font-size: 24px;
-  color: #B0B0B0;
+  color: var(--color-gray);
   margin-bottom: 40px;
   width: 100%;
   box-sizing: border-box;
@@ -123,8 +123,8 @@
 .desktopButton {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   text-decoration: none;
   font-weight: bold;
   border-radius: 0.5rem;
@@ -134,7 +134,7 @@
 }
 
 .desktopButton:hover {
-  background-color: #FF5722;
+  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
 }
 
@@ -143,8 +143,8 @@
   align-items: center;
   gap: 8px;
   padding: 1rem 2rem;
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   text-decoration: none;
   font-weight: bold;
   border-radius: 0.5rem;
@@ -154,7 +154,7 @@
 }
 
 .mobileButton:hover {
-  background-color: #FF5722;
+  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
 }
 

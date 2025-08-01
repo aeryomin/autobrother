@@ -1,6 +1,6 @@
 .main {
   min-height: 100vh;
-  background-color: #1a1a1a;
+  background-color: var(--color-bg-services);
   padding: 120px 0 80px;
 }
 
@@ -15,14 +15,14 @@
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #FF4500;
+  color: var(--color-primary);
 }
 
 .content {
-  background-color: #222222;
+  background-color: var(--color-bg-cards);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px var(--shadow-light);
 }
 
 .description {
@@ -32,14 +32,14 @@
 .description p {
   font-size: 18px;
   line-height: 1.6;
-  color: #CCCCCC;
+  color: var(--color-gray-light);
   margin-bottom: 24px;
 }
 
 .price {
   font-size: 24px;
   font-weight: 600;
-  color: #FF4500;
+  color: var(--color-primary);
 }
 
 .actions {
@@ -55,8 +55,8 @@
   justify-content: center;
   gap: 8px;
   padding: 16px;
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border: none;
   border-radius: 8px;
   font-size: 18px;
@@ -67,7 +67,7 @@
 }
 
 .bookButton:hover {
-  background-color: #FF5722;
+  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
 }
 
@@ -76,8 +76,8 @@
   align-items: center;
   gap: 8px;
   padding: 16px 24px;
-  background-color: #333;
-  color: white;
+  background-color: var(--color-gray-darkest);
+  color: var(--color-white);
   border: none;
   border-radius: 8px;
   font-size: 18px;
@@ -88,7 +88,7 @@
 }
 
 .backButton:hover {
-  background-color: #444;
+  background-color: var(--color-gray-darker);
   transform: translateY(-2px);
 }
 

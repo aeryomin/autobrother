@@ -1,7 +1,7 @@
 .main {
   min-height: 100vh;
-  background-color: #111111;
-  color: #B0B0B0;
+  background-color: var(--color-bg-main);
+  color: var(--color-gray);
   width: 100%;
   overflow-x: hidden;
   position: relative;

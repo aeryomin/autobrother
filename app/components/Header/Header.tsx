@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Header.module.css'
 import MobileMenu from './MobileMenu'
+import LogoIcon from '@/public/images/logo-51.svg'
 
 export default function Header() {
   return (
@@ -10,14 +10,8 @@ export default function Header() {
         <div className={styles.content}>
           <MobileMenu />
           <div className={styles.logo}>
-            <Image 
-              src="/images/logo.svg" 
-              alt="АвтоБрат Рыбинск"
-              width={40}
-              height={40}
-              className={styles.logoImage}
-            />
-            <span>АвтоБрат</span>
+            <LogoIcon className={styles.logoImage} />
+            {/* <span>АвтоБрат</span> */}
           </div>
           
           <div className={styles.desktopContacts}>
