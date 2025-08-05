@@ -1,11 +1,12 @@
 .hero {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   overflow: hidden;
+  padding-top: 96px; /* Компенсация высоты Header */
 }
 
 .container {
@@ -128,7 +129,7 @@
   }
 
   .hero {
-    height: 100vh;
+    height: 60vh;
   }
 
   .background {
@@ -153,7 +154,7 @@
 
 @media (max-width: 576px) {
   .hero {
-    height: 100vh;
+    height: 50vh;
   }
 
   .background {
@@ -172,6 +173,6 @@
   }
 
   .content {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 } 

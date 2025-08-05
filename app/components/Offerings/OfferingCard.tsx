@@ -14,8 +14,10 @@ export default function OfferingCard({ offering }: OfferingCardProps) {
         alt={offering.title}
         className={styles.image}
       />
-      <h3 className={styles.cardTitle}>{offering.shortTitle}</h3>
-      <p className={styles.cardDescription}>{offering.shortDescription}</p>
+      <div className={styles.cardContent}>
+        <h3 className={styles.cardTitle}>{offering.shortTitle}</h3>
+        <p className={styles.cardDescription}>{offering.shortDescription}</p>
+      </div>
     </Link>
   )
 } 

@@ -281,4 +281,4 @@ export const offerings: Offering[] = [
 
 export function getOfferingById(id: string): Offering | undefined {
   return offerings.find((offering) => offering.id === id);
-}
+} 
