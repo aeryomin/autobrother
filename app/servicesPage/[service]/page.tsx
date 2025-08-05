@@ -3,6 +3,8 @@ import styles from './ServiceDetail.module.css'
 import BookNowButton from '../../components/shared/BookNowButton/BookNowButton'
 import { getOfferingById } from '@/app/data/offerings'
 
+
+
 export default function ServicePage({ params }: { params: { service: string } }) {
   const service = getOfferingById(params.service)
 
@@ -15,7 +17,11 @@ export default function ServicePage({ params }: { params: { service: string } })
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.serviceIcon}>
-            <img src={service.iconPath || `/images/${service.icon}-new.svg`} alt={service.title} />
+            <img 
+              src={service.iconPath || `/icons/${service.icon}-new.svg`} 
+              alt={service.title}
+              className={styles.serviceIconSvg}
+            />
           </div>
           <h1 className={styles.title}>{service.title}</h1>
           <p className={styles.description}>{service.description}</p>

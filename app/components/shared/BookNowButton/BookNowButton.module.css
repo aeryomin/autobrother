@@ -1,5 +1,5 @@
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
@@ -12,6 +12,8 @@
   transition: all 0.3s ease;
   text-decoration: none;
   white-space: nowrap;
+  width: auto;
+  max-width: none;
 }
 
 .primary {

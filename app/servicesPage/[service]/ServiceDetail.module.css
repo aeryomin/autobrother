@@ -24,10 +24,11 @@
   justify-content: center;
 }
 
-.serviceIcon img {
+.serviceIconSvg {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: brightness(0); /* Делаем иконки черными */
 }
 
 .title {

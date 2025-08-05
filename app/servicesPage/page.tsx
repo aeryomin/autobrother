@@ -4,6 +4,8 @@ import BookNowButton from '../components/shared/BookNowButton/BookNowButton'
 import Header from '../components/Header/Header'
 import { offerings } from '@/app/data/offerings'
 
+
+
 export default function ServicesPage() {
   // Показываем все доступные сервисы
   const services = offerings
@@ -25,7 +27,11 @@ export default function ServicesPage() {
         {services.map((service) => (
           <div key={service.id} className={styles.serviceCard}>
             <div className={styles.serviceIcon}>
-              <img src={service.iconPath || `/images/${service.icon}-new.svg`} alt={service.title} />
+              <img 
+                src={service.iconPath || `/icons/${service.icon}-new.svg`} 
+                alt={service.title}
+                className={styles.serviceIconSvg}
+              />
             </div>
             <h3 className={styles.serviceTitle}>{service.title}</h3>
             <p className={styles.serviceDescription}>{service.description}</p>
