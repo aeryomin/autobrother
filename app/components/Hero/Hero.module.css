@@ -33,7 +33,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .textAppear {
@@ -70,7 +70,7 @@
   line-height: 1.2;
   text-align: left;
   font-family: 'Bebas Neue', sans-serif;
-  width: 50%;
+  width: 100%;
   box-sizing: border-box;
   color: var(--color-white);
 }

@@ -9,10 +9,9 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Header />
+      <Header currentPage="home" />
       <Hero />
       <Offerings />
-      {/* <Advantages /> */}
       <Footer />
     </main>
   );

@@ -11,6 +11,7 @@ import RepairIcon from '@/public/images/suspension-repair.svg'
 import AlignmentIcon from '@/public/images/alignment-new.svg'
 import MaintenanceIcon from '@/public/images/maintenance-new.svg'
 import FilterIcon from '@/public/images/filter-new.svg'
+import EquipmentIcon from '@/public/images/equipment.svg'
 
 // Карта иконок для динамического выбора
 const iconMap = {
@@ -22,6 +23,7 @@ const iconMap = {
   alignment: AlignmentIcon,
   maintenance: MaintenanceIcon,
   filter: FilterIcon,
+  equipment: EquipmentIcon,
 }
 
 interface OfferingCardProps {
@@ -29,7 +31,7 @@ interface OfferingCardProps {
 }
 
 export default function OfferingCard({ offering }: OfferingCardProps) {
-  const Icon = iconMap[offering.icon as keyof typeof iconMap]
+  const Icon = iconMap[offering.icon as keyof typeof iconMap] || EngineIcon
 
   return (
     <Link href={`/offerings/${offering.id}`} className={styles.card}>

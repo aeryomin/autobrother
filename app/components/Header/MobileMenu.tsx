@@ -4,7 +4,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './Header.module.css'
 
-export default function MobileMenu() {
+interface MobileMenuProps {
+  currentPage?: string
+}
+
+export default function MobileMenu({ currentPage }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -85,6 +89,21 @@ export default function MobileMenu() {
               </button>
             </div>
           </div>
+
+          <nav className={styles.mobileNav}>
+            <Link href="/" className={`${styles.mobileNavLink} ${currentPage === 'home' ? styles.active : ''}`}>
+              Главная
+            </Link>
+            <Link href="/servicesPage" className={`${styles.mobileNavLink} ${currentPage === 'services' ? styles.active : ''}`}>
+              Сервисы
+            </Link>
+            <Link href="/about" className={`${styles.mobileNavLink} ${currentPage === 'about' ? styles.active : ''}`}>
+              О нас
+            </Link>
+            <Link href="/contact" className={`${styles.mobileNavLink} ${currentPage === 'contact' ? styles.active : ''}`}>
+              Контакты
+            </Link>
+          </nav>
 
           <Link href="/booking" className={styles.bookingButton}>
             <i className={`fas fa-calendar-alt ${styles.bookingIcon}`}></i>

@@ -19,8 +19,7 @@ export default function Hero() {
 
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Починим
-          <br /> как родного
+          Забота о вашем автомобиле — <br /> наша работа
         </h1>
         <div className={styles.buttons}>
           <BookNowButton className={styles.primaryButton} />

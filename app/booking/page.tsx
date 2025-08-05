@@ -5,7 +5,7 @@ import { useState, useRef, FormEvent } from 'react'
 import styles from './Booking.module.css'
 import Popup from '../components/shared/Popup/Popup'
 import { formatPhone } from '../utils/formatPhone'
-import { postBookingRequest } from '../services/booking'
+import { postBookingRequest } from '../appServices/booking'
 
 export default function Booking() {
   const [isSubmitting, setIsSubmitting] = useState(false)
