@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Offerings from "./components/Offerings/Offerings";
 import Advantages from "./components/Advantages/Advantages";
+import Footer from "./components/Footer/Footer";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -11,7 +12,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Offerings />
-      <Advantages />
+      {/* <Advantages /> */}
+      <Footer />
     </main>
   );
 }
