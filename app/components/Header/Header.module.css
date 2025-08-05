@@ -1,11 +1,9 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-bg-header);
   padding: 18px 0;
-  box-shadow: 0 2px 10px var(--shadow-medium);
   z-index: 100;
   font-family: 'Arial', sans-serif;
   width: 100%;
@@ -34,13 +32,12 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 2rem;
   font-family: 'Arial', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-white);
   white-space: nowrap;
-  /* margin-right: 4rem; */
   letter-spacing: 1px;
 }
 
@@ -51,101 +48,42 @@
   color: var(--color-primary);
 }
 
-.desktopContacts {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.contactItem {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  white-space: nowrap;
-}
-
-.icon {
-  color: var(--color-primary);
+.logoText {
   font-size: 24px;
-  width: 30px;
-  text-align: center;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 2px;
 }
 
-.text {
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  color: var(--color-gray);
-}
-
-.desktopSearch {
-  width: 200px;
-}
-
-.searchContainer {
+.navigation {
   display: flex;
+  gap: 40px;
   align-items: center;
-  background-color: var(--color-bg-search);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  height: 50px;
+  margin-left: auto;
+  margin-right: 40px;
 }
 
-.searchInput {
-  background: transparent;
-  border: none;
-  color: var(--color-gray);
-  padding: 0.25rem 0.625rem;
-  width: 100%;
-  outline: none;
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
-}
-
-.searchInput::placeholder {
-  color: var(--color-gray-dark);
-}
-
-.searchButton {
-  background: none;
-  border: none;
-  color: var(--color-primary);
-  cursor: pointer;
-  padding: 0.25rem 0.625rem;
-  font-size: 24px;
+.navLink {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
   transition: color 0.3s ease;
+  position: relative;
 }
 
-.searchButton:hover {
-  color: var(--color-primary-hover);
+.navLink:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
 }
 
 .bookingButton {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border: none;
-  border-radius: 8px;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
   margin-left: 2rem;
-  white-space: nowrap;
-}
-
-.bookingButton:hover {
-  background-color: var(--color-primary-hover);
-  transform: translateY(-2px);
-}
-
-.bookingIcon {
-  font-size: 20px;
 }
 
 /* Мобильные стили */
@@ -168,9 +106,7 @@
     height: 30px;
   }
 
-  .desktopContacts,
-  .desktopSearch,
-  .bookingButton {
+  .navigation {
     display: none;
   }
 

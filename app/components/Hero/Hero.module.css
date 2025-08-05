@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,6 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  top: 96px;
 }
 
 .background img {
@@ -34,7 +33,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .textAppear {
@@ -52,25 +51,16 @@
   }
 }
 
-.dust {
-  position: absolute;
-  width: 12rem;
-  height: 12rem;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  opacity: 0;
-  top: 30%;
-  left: 15%;
-  transform: translate(-80%, 0) scale(0);
-}
-
 .content {
-  text-align: center;
-  margin-top: -4rem;
   position: relative;
   z-index: 10;
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 5rem;
 }
 
 .title {
@@ -78,10 +68,11 @@
   font-weight: normal;
   margin-bottom: 2rem;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   font-family: 'Bebas Neue', sans-serif;
-  width: 100%;
+  width: 50%;
   box-sizing: border-box;
+  color: var(--color-white);
 }
 
 .title span {
@@ -116,50 +107,9 @@
 .buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  width: 100%;
-}
-
-.desktopButton {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  white-space: nowrap;
-}
-
-.desktopButton:hover {
-  background-color: var(--color-primary-hover);
-  transform: translateY(-2px);
-}
-
-.mobileButton {
-  display: none;
-  align-items: center;
-  gap: 8px;
-  padding: 1rem 2rem;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  white-space: nowrap;
-}
-
-.mobileButton:hover {
-  background-color: var(--color-primary-hover);
-  transform: translateY(-2px);
-}
-
-.bookingIcon {
-  font-size: 20px;
+  justify-content: left;
+  width: 50%;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
@@ -192,18 +142,8 @@
     object-position: center;
   }
 
-  .desktopButton {
-    display: none;
-  }
-
-  .mobileButton {
-    display: inline-flex;
-    padding: 0.75rem 1.5rem;
-    font-size: 14px;
-  }
-
-  .bookingIcon {
-    font-size: 16px;
+  .buttons {
+    gap: 0.75rem;
   }
 
   .content {
@@ -227,13 +167,8 @@
     object-position: center;
   }
 
-  .mobileButton {
-    padding: 0.5rem 1rem;
-    font-size: 12px;
-  }
-
-  .bookingIcon {
-    font-size: 14px;
+  .buttons {
+    gap: 0.5rem;
   }
 
   .content {

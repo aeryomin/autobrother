@@ -1,0 +1,63 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background-color: var(--color-white);
+  color: var(--color-gray-darkest);
+  border: 2px solid var(--color-gray);
+}
+
+.secondary:hover {
+  background-color: var(--color-gray-light);
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .icon {
+    font-size: 16px;
+  }
+} 
