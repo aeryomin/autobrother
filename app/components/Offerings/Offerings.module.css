@@ -1,68 +1,38 @@
 .services {
-  background-color: var(--color-bg-services);
-  padding: 80px 0;
   font-family: 'Arial', sans-serif;
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-bg-services);
 }
 
 .title {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text-dark);
   text-align: center;
-  font-family: var(--font-bebas-neue), 'Bebas Neue', cursive;
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: var(--color-primary);
-  letter-spacing: 1px;
+  align-self: flex-start;
+  margin-top: 4rem;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-}
-
-.card {
-  background: var(--color-bg-cards-light);
-  border-radius: 10px;
-  padding: 27px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  text-align: center;
-  box-shadow: 0 5px 15px var(--shadow-medium);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.image {
-  margin-bottom: 18px;
-  width: 72px;
-  height: 72px;
-}
-
-/* .image:hover {
-  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(119%) brightness(1.1);
-} */
-
-.cardTitle {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-text-dark);
-  white-space: pre-line;
-}
-
-.cardDescription {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  color: var(--color-gray-dark);
-  line-height: 1.5;
 }
 
 @media (max-width: 1200px) {
@@ -90,19 +60,6 @@
     font-size: 42px;
     margin-bottom: 30px;
   }
-
-  .card {
-    padding: 20px;
-  }
-
-  .image {
-    width: 60px;
-    height: 60px;
-  }
-
-  .cardTitle {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -118,18 +75,5 @@
   .title {
     font-size: 38px;
     margin-bottom: 20px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  .image {
-    width: 50px;
-    height: 50px;
-  }
-
-  .cardTitle {
-    font-size: 14px;
   }
 } 

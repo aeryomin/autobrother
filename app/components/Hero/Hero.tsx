@@ -1,36 +1,32 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from './Hero.module.css'
+import Image from "next/image";
+import styles from "./Hero.module.css";
+import BookNowButton from "../shared/BookNowButton/BookNowButton";
+import Offerings from "../Offerings/Offerings";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.background}>
         <Image
-          src="/images/bg-image_03.png"
+          src="/images/bg-image-04.png"
           alt="Фон автосервиса"
           fill
           priority
           className="object-cover"
         />
-        <div className={styles.overlay}></div>
+        <div className={styles.overlay}></div> {/* Затемнение фона */}
       </div>
-      <div className={`${styles.dust} dustAppear`}></div>
-      
+
       <div className={styles.content}>
         <h1 className={styles.title}>
-          <span className={styles.textAppear}>« ПОЧИНИМ</span> КАК РОДНОГО »
+          Починим
+          <br /> как родного
         </h1>
         <div className={styles.buttons}>
-          <a href="#offerings" className={styles.desktopButton}>
-            УЗНАТЬ БОЛЬШЕ
-          </a>
-          <Link href="/booking" className={styles.mobileButton}>
-            <i className={`fas fa-calendar-alt ${styles.bookingIcon}`}></i>
-            Запись онлайн
-          </Link>
+          <BookNowButton className={styles.primaryButton} />
         </div>
+        {/* <Offerings /> */}
       </div>
     </section>
-  )
-} 
+  );
+}
