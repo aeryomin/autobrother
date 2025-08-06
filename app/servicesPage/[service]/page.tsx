@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import styles from './ServiceDetail.module.css'
 import BookNowButton from '../../components/shared/BookNowButton/BookNowButton'
 import BackButton from '../../components/shared/BackButton/BackButton'
@@ -20,9 +21,11 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
         <div className={styles.heroContent}>
           <BackButton />
           <div className={styles.serviceIcon}>
-            <img 
+            <Image 
               src={service.iconPath || `/icons/${service.icon}-new.svg`} 
               alt={service.title}
+              width={80}
+              height={80}
               className={styles.serviceIconSvg}
             />
           </div>

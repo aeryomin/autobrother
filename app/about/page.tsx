@@ -1,4 +1,5 @@
 import styles from './About.module.css'
+import Image from 'next/image'
 import BookNowButton from '../components/shared/BookNowButton/BookNowButton'
 import Header from '../components/Header/Header'
 
@@ -10,7 +11,7 @@ export default function AboutPage() {
         <div className={styles.heroContent}>
           <h1 className={styles.title}>О нас</h1>
           <p className={styles.subtitle}>
-            Автосервис "АвтоБрат" - ваш надежный партнер в обслуживании автомобиля
+            Автосервис &ldquo;АвтоБрат&rdquo; - ваш надежный партнер в обслуживании автомобиля
           </p>
         </div>
       </div>
@@ -21,7 +22,7 @@ export default function AboutPage() {
             <div className={styles.textContent}>
               <h2>Наша история</h2>
               <p>
-                Автосервис "SferaAuto" был основан в ____ году группой опытных автомехаников 
+                Автосервис &ldquo;SferaAuto&rdquo; был основан в ____ году группой опытных автомехаников 
                 с целью предоставления качественных услуг по ремонту и обслуживанию автомобилей. 
                 За более чем 10 лет работы мы обслужили тысячи автомобилей и заслужили доверие 
                 клиентов благодаря высокому качеству работ и честному подходу к делу.
@@ -33,7 +34,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className={styles.imageContainer}>
-              <img src="/images/mechanic.svg" alt="Наша команда" />
+              <Image src="/images/mechanic.svg" alt="Наша команда" width={400} height={300} />
             </div>
           </div>
         </div>
@@ -41,7 +42,7 @@ export default function AboutPage() {
         <div className={styles.section}>
           <div className={styles.sectionContent}>
             <div className={styles.imageContainer}>
-              <img src="/images/equipment.svg" alt="Наше оборудование" />
+              <Image src="/images/equipment.svg" alt="Наше оборудование" width={400} height={300} />
             </div>
             <div className={styles.textContent}>
               <h2>Наше оборудование</h2>
@@ -63,7 +64,7 @@ export default function AboutPage() {
           <div className={styles.valuesGrid}>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <img src="/images/guarantee.svg" alt="Качество" />
+                <Image src="/images/guarantee.svg" alt="Качество" width={60} height={60} />
               </div>
               <h3>Качество</h3>
               <p>Мы не идем на компромиссы в вопросах качества. Каждая работа выполняется 
@@ -71,7 +72,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <img src="/images/honesty.svg" alt="Честность" />
+                <Image src="/images/honesty.svg" alt="Честность" width={60} height={60} />
               </div>
               <h3>Честность</h3>
               <p>Прозрачное ценообразование, честная диагностика и рекомендации. 
@@ -79,7 +80,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <img src="/images/speed.svg" alt="Скорость" />
+                <Image src="/images/speed.svg" alt="Скорость" width={60} height={60} />
               </div>
               <h3>Скорость</h3>
               <p>Ценим время наших клиентов. Выполняем работы в согласованные сроки 
@@ -87,7 +88,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <img src="/images/customer.svg" alt="Клиентоориентированность" />
+                <Image src="/images/customer.svg" alt="Клиентоориентированность" width={60} height={60} />
               </div>
               <h3>Клиентоориентированность</h3>
               <p>Индивидуальный подход к каждому клиенту, гибкие условия работы 
