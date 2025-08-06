@@ -1,13 +1,36 @@
 .main {
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--color-bg-main);
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .main > * {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+}
+
+/* Распределение пространства между компонентами */
+.main > :nth-child(1) { /* Header */
+  flex: 0 0 auto;
+}
+
+.main > :nth-child(2) { /* Hero */
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.main > :nth-child(3) { /* Offerings */
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.main > :nth-child(4) { /* Footer */
+  flex: 0 0 auto;
 } 

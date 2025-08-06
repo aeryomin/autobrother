@@ -6,8 +6,8 @@
   transition: transform 0.3s ease;
   text-align: start;
   box-shadow: 0 5px 5px var(--shadow-medium);
-  /* min-width: 300px; */
   width: 350px;
+  height: 120px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,7 +27,7 @@
 }
 
 .cardTitle {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 20px;
   font-weight: 600;
   color: var(--color-text-dark);
@@ -41,7 +41,7 @@
 }
 
 .cardDescription {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 14px;
   color: var(--color-text-dark);
 }
@@ -50,6 +50,7 @@
   .card {
     padding: 16px;
     gap: 12px;
+    height: 100px;
   }
 
   .image {
@@ -66,6 +67,7 @@
   .card {
     padding: 12px;
     gap: 10px;
+    height: 90px;
   }
 
   .image {

@@ -1,5 +1,5 @@
 .services {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
 }
 
 .container {
@@ -9,11 +9,13 @@
   align-items: center;
   justify-content: space-around;
   background-color: var(--color-bg-services);
-  min-height: auto;
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-roboto);
 }
 
 .title {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 24px;
   font-weight: 600;
   color: var(--color-text-dark);

@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter, Bebas_Neue } from 'next/font/google'
+import { Roboto, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ 
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--font-roboto'
+})
 const bebasNeue = Bebas_Neue({ 
   weight: '400',
   subsets: ['latin'],
@@ -30,7 +34,7 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className={`${inter.className} ${bebasNeue.variable}`} suppressHydrationWarning>
+      <body className={`${roboto.className} ${bebasNeue.variable}`} suppressHydrationWarning>
         {children}
       </body>
     </html>

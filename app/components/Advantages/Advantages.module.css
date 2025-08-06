@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
 }
 
 .container {
@@ -46,7 +46,7 @@
 }
 
 .text {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 18px;
   font-weight: 600;
   color: var(--color-gray);

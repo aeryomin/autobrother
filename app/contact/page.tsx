@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 import styles from './Contact.module.css'
 import BookNowButton from '../components/shared/BookNowButton/BookNowButton'
 import Header from '../components/Header/Header'
@@ -89,9 +90,14 @@ export default function ContactPage() {
             <h2>Как нас найти</h2>
             <div className={styles.map}>
               {/* Здесь будет встроенная карта */}
-              <div className={styles.mapPlaceholder}>
-                <i className="fas fa-map"></i>
-                <p>Карта будет загружена здесь</p>
+              <div className={styles.mapContainer}>
+                <Image 
+                  src="/images/map.png" 
+                  alt="Карта расположения автосервиса"
+                  width={600}
+                  height={400}
+                  className={styles.mapImage}
+                />
               </div>
             </div>
           </div>

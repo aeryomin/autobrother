@@ -2,7 +2,6 @@ import Image from "next/image";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Offerings from "./components/Offerings/Offerings";
-import Advantages from "./components/Advantages/Advantages";
 import Footer from "./components/Footer/Footer";
 import styles from "./page.module.css";
 

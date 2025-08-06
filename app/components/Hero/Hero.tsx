@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./Hero.module.css";
 import BookNowButton from "../shared/BookNowButton/BookNowButton";
-import Offerings from "../Offerings/Offerings";
 
 export default function Hero() {
   return (
@@ -19,12 +18,11 @@ export default function Hero() {
 
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Забота о вашем автомобиле — <br /> наша работа
+          Полный спектр автоуслуг - <br /> один сервис!
         </h1>
         <div className={styles.buttons}>
           <BookNowButton className={styles.primaryButton} />
         </div>
-        {/* <Offerings /> */}
       </div>
     </section>
   );

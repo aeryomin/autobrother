@@ -5,7 +5,7 @@
   right: 0;
   padding: 18px 0;
   z-index: 100;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 32px;
   font-weight: 700;
   color: var(--color-white);
@@ -187,7 +187,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-roboto);
     font-size: 24px;
     font-weight: 700;
     color: var(--color-primary);
@@ -209,6 +209,7 @@
   }
 
   .text {
+    font-family: var(--font-roboto);
     font-size: 16px;
     word-break: break-word;
   }
@@ -232,7 +233,7 @@
     background: transparent;
     border: none;
     color: var(--color-gray);
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-roboto);
   }
 
   .mobileSearch .searchButton {

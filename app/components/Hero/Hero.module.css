@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 40vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,11 +66,11 @@
 
 .title {
   font-size: 3.75rem;
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 2rem;
   line-height: 1.2;
   text-align: left;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-pt-sans);
   width: 100%;
   box-sizing: border-box;
   color: var(--color-white);
@@ -99,6 +99,7 @@
 
 .subtitle {
   font-size: 24px;
+  font-family: var(--font-roboto);
   color: var(--color-gray);
   margin-bottom: 40px;
   width: 100%;
@@ -111,6 +112,7 @@
   justify-content: left;
   width: 50%;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -126,10 +128,6 @@
 
   .container {
     padding: 0 1rem;
-  }
-
-  .hero {
-    height: 60vh;
   }
 
   .background {
@@ -153,10 +151,6 @@
 }
 
 @media (max-width: 576px) {
-  .hero {
-    height: 50vh;
-  }
-
   .background {
     position: absolute;
     inset: 0;

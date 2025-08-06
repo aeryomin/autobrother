@@ -8,9 +8,9 @@ interface OfferingCardProps {
 
 export default function OfferingCard({ offering }: OfferingCardProps) {
   return (
-    <Link href={`/offerings/${offering.id}`} className={styles.card}>
+    <Link href={`/servicesPage/${offering.id}`} className={styles.card}>
       <img 
-        src={offering.iconPath || `/icons/${offering.icon}-new.svg`} 
+        src={offering.iconPath} 
         alt={offering.title}
         className={styles.image}
       />

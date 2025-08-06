@@ -127,6 +127,20 @@
   color: #2a5298;
 }
 
+.mapContainer {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .formSection {
   background: var(--color-bg-cards);
   padding: 40px;
@@ -181,7 +195,7 @@
 
 .submitButton {
   grid-column: 1 / -1;
-  background: #2a5298;
+  background: var(--color-primary);
   color: white;
   padding: 15px 30px;
   border: none;
@@ -189,16 +203,15 @@
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .submitButton:hover {
-  background: #1e3c72;
+  background: var(--color-primary-hover);
 }
 
 .cta {
   text-align: center;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: var(--color-gray-light);
   color: white;
   padding: 60px 40px;
   border-radius: 12px;

@@ -1,12 +1,14 @@
 import { notFound } from 'next/navigation'
 import styles from './ServiceDetail.module.css'
 import BookNowButton from '../../components/shared/BookNowButton/BookNowButton'
+import BackButton from '../../components/shared/BackButton/BackButton'
 import { getOfferingById } from '@/app/data/offerings'
 
 
 
-export default function ServicePage({ params }: { params: { service: string } }) {
-  const service = getOfferingById(params.service)
+export default async function ServicePage({ params }: { params: Promise<{ service: string }> }) {
+  const { service: serviceId } = await params
+  const service = getOfferingById(serviceId)
 
   if (!service) {
     notFound()
@@ -16,6 +18,7 @@ export default function ServicePage({ params }: { params: { service: string } })
     <div className={styles.container}>
       <div className={styles.hero}>
         <div className={styles.heroContent}>
+          <BackButton />
           <div className={styles.serviceIcon}>
             <img 
               src={service.iconPath || `/icons/${service.icon}-new.svg`} 
@@ -70,7 +73,7 @@ export default function ServicePage({ params }: { params: { service: string } })
         </div>
 
         <div className={styles.cta}>
-          <h2>Записаться на {service.title.toLowerCase()}</h2>
+          <h2>Записаться на: {service.title.toLowerCase()}</h2>
           <p>Оставьте заявку и мы свяжемся с вами для уточнения деталей</p>
           <BookNowButton />
         </div>
