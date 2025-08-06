@@ -92,7 +92,7 @@ export default function ContactPage() {
               {/* Здесь будет встроенная карта */}
               <div className={styles.mapContainer}>
                 <Image 
-                  src="/images/map.png" 
+                  src="/images/optimized/map.webp" 
                   alt="Карта расположения автосервиса"
                   width={600}
                   height={400}
