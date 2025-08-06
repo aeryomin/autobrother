@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Roboto, Bebas_Neue } from 'next/font/google'
+import { Roboto, Bebas_Neue, PT_Sans } from 'next/font/google'
 import './globals.css'
 
 const roboto = Roboto({ 
@@ -12,9 +12,14 @@ const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
   variable: '--font-bebas-neue'
 })
+const ptSans = PT_Sans({ 
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-pt-sans'
+})
 
 export const metadata: Metadata = {
-  title: 'АвтоБрат Рыбинск - Надёжный ремонт автомобилей',
+  title: 'SferaAuto Рыбинск - Надёжный ремонт автомобилей',
   description: 'Профессиональный автосервис в Рыбинске. Ремонт двигателя, замена масла, компьютерная диагностика и другие услуги.',
 }
 
@@ -34,7 +39,7 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className={`${roboto.className} ${bebasNeue.variable}`} suppressHydrationWarning>
+      <body className={`${roboto.className} ${bebasNeue.variable} ${ptSans.variable}`} suppressHydrationWarning>
         {children}
       </body>
     </html>
