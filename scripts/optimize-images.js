@@ -12,10 +12,14 @@ if (!fs.existsSync(optimizedDir)) {
 
 // Список больших изображений для оптимизации
 const imagesToOptimize = [
+  'bg-image-02.png',
+  'bg-image-03.png',
+  'bg-image-04.png',
   'bg-image-05.png',
   'bg-image-06.png', 
   'bg-image-07.png',
-  'bg-services.png'
+  'bg-services.png',
+  'map.png'
 ];
 
 async function optimizeImage(filename) {
