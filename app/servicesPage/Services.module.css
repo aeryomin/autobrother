@@ -1,0 +1,195 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--color-gray);
+}
+
+.hero {
+  background: url('/images/bg-services.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.serviceIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceIconSvg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0); /* Делаем иконки черными */
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.serviceDescription {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.servicePrice {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a5298;
+  margin-bottom: 20px;
+}
+
+.serviceLink {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.serviceLink:hover {
+  background: var(--color-primary-hover);
+}
+
+.advantages {
+  background: var(--color-gray-darkest);
+  padding: 80px 20px;
+}
+
+.advantagesTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.advantagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advantage {
+  text-align: center;
+  background: var(--color-bg-cards);
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.advantageIcon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantageIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.advantage h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--color-white);
+}
+
+.advantage p {
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  
+  .advantagesGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .advantagesTitle {
+    font-size: 2rem;
+  }
+} 

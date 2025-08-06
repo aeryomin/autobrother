@@ -1,11 +1,12 @@
 .hero {
   position: relative;
-  height: 50vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   overflow: hidden;
+  padding-top: 96px; /* Компенсация высоты Header */
 }
 
 .container {
@@ -33,7 +34,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .textAppear {
@@ -65,12 +66,12 @@
 
 .title {
   font-size: 3.75rem;
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 2rem;
   line-height: 1.2;
   text-align: left;
-  font-family: 'Bebas Neue', sans-serif;
-  width: 50%;
+  font-family: var(--font-pt-sans);
+  width: 100%;
   box-sizing: border-box;
   color: var(--color-white);
 }
@@ -98,6 +99,7 @@
 
 .subtitle {
   font-size: 24px;
+  font-family: var(--font-roboto);
   color: var(--color-gray);
   margin-bottom: 40px;
   width: 100%;
@@ -110,6 +112,7 @@
   justify-content: left;
   width: 50%;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -125,10 +128,6 @@
 
   .container {
     padding: 0 1rem;
-  }
-
-  .hero {
-    height: 100vh;
   }
 
   .background {
@@ -152,10 +151,6 @@
 }
 
 @media (max-width: 576px) {
-  .hero {
-    height: 100vh;
-  }
-
   .background {
     position: absolute;
     inset: 0;
@@ -172,6 +167,6 @@
   }
 
   .content {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 } 

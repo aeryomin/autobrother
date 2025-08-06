@@ -1,5 +1,5 @@
 .services {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
 }
 
 .container {
@@ -9,16 +9,19 @@
   align-items: center;
   justify-content: space-around;
   background-color: var(--color-bg-services);
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-roboto);
 }
 
 .title {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 24px;
   font-weight: 600;
   color: var(--color-text-dark);
   text-align: center;
   align-self: flex-start;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .title::after {
@@ -53,12 +56,12 @@
 
 @media (max-width: 768px) {
   .services {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .title {
     font-size: 42px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -69,11 +72,11 @@
   }
 
   .services {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   .title {
     font-size: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 } 

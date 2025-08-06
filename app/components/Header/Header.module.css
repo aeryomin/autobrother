@@ -5,7 +5,7 @@
   right: 0;
   padding: 18px 0;
   z-index: 100;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 32px;
   font-weight: 700;
   color: var(--color-white);
@@ -60,7 +60,7 @@
   gap: 40px;
   align-items: center;
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .navLink {
@@ -72,7 +72,8 @@
   position: relative;
 }
 
-.navLink:hover::after {
+.navLink:hover::after,
+.navLink.active::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -186,7 +187,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-roboto);
     font-size: 24px;
     font-weight: 700;
     color: var(--color-primary);
@@ -208,6 +209,7 @@
   }
 
   .text {
+    font-family: var(--font-roboto);
     font-size: 16px;
     word-break: break-word;
   }
@@ -231,13 +233,60 @@
     background: transparent;
     border: none;
     color: var(--color-gray);
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-roboto);
   }
 
   .mobileSearch .searchButton {
     color: var(--color-primary);
   }
 }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .mobileNavLink {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(42, 82, 152, 0.1);
+    transition: color 0.3s ease;
+  }
+
+  .mobileNavLink:hover,
+  .mobileNavLink.active {
+    color: var(--color-white);
+  }
+
+  .bookingButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--color-primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    width: 100%;
+  }
+
+  .bookingButton:hover {
+    background: #1e3c72;
+  }
+
+  .bookingIcon {
+    font-size: 18px;
+  }
 
 @media (min-width: 769px) {
   .mobileMenu,
