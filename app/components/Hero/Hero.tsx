@@ -18,7 +18,7 @@ export default function Hero() {
 
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Полный спектр автоуслуг - <br /> один сервис!
+          Не мы сломали <br /> но мы починим!
         </h1>
         <div className={styles.buttons}>
           <BookNowButton className={styles.primaryButton} />
