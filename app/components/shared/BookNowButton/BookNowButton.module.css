@@ -1,17 +1,19 @@
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   white-space: nowrap;
+  width: auto;
+  max-width: none;
 }
 
 .primary {

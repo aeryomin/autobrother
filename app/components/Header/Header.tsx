@@ -4,28 +4,32 @@ import MobileMenu from './MobileMenu'
 import LogoIcon from '@/public/images/logo-51.svg'
 import BookNowButton from '../shared/BookNowButton/BookNowButton'
 
-export default function Header() {
+interface HeaderProps {
+  currentPage?: string
+}
+
+export default function Header({ currentPage }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <MobileMenu />
+          <MobileMenu currentPage={currentPage} />
           <div className={styles.logo}>
+            {/* <span className={styles.logoText}>Автосервис</span> */}
             <LogoIcon className={styles.logoImage} />
-            <span className={styles.logoText}>Автосервис</span>
           </div>
           
           <nav className={styles.navigation}>
-            <Link href="/" className={styles.navLink}>
+            <Link href="/" className={`${styles.navLink} ${currentPage === 'home' ? styles.active : ''}`}>
               Главная
             </Link>
-            <Link href="/services" className={styles.navLink}>
+            <Link href="/servicesPage" className={`${styles.navLink} ${currentPage === 'services' ? styles.active : ''}`}>
               Сервисы
             </Link>
-            <Link href="/about" className={styles.navLink}>
+            <Link href="/about" className={`${styles.navLink} ${currentPage === 'about' ? styles.active : ''}`}>
               О нас
             </Link>
-            <Link href="/contact" className={styles.navLink}>
+            <Link href="/contact" className={`${styles.navLink} ${currentPage === 'contact' ? styles.active : ''}`}>
               Контакты
             </Link>
           </nav>

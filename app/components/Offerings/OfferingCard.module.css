@@ -6,12 +6,13 @@
   transition: transform 0.3s ease;
   text-align: start;
   box-shadow: 0 5px 5px var(--shadow-medium);
-  /* min-width: 300px; */
-  max-width: 400px;
+  width: 350px;
+  height: 120px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
 }
 
 .card:hover {
@@ -19,33 +20,42 @@
 }
 
 .image {
-  margin-bottom: 5px;
-  width: 72px;
-  height: 72px;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
   filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(119%);
 }
 
 .cardTitle {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 20px;
   font-weight: 600;
   color: var(--color-text-dark);
 }
 
+.cardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .cardDescription {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-roboto);
   font-size: 14px;
   color: var(--color-text-dark);
 }
 
 @media (max-width: 768px) {
   .card {
-    padding: 20px;
+    padding: 16px;
+    gap: 12px;
+    height: 100px;
   }
 
   .image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .cardTitle {
@@ -55,12 +65,14 @@
 
 @media (max-width: 576px) {
   .card {
-    padding: 15px;
+    padding: 12px;
+    gap: 10px;
+    height: 90px;
   }
 
   .image {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
 
   .cardTitle {
