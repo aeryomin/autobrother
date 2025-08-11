@@ -18,8 +18,7 @@
   
   /* Фоны */
   --color-bg-main: #111111;
-  /* --color-bg-header: #151515; */
-  /* --color-bg-header: #303030; */
+  --color-bg-header: var(--color-gray-light);
   --color-bg-services: #d7d6d6;
   --color-bg-advantages: #151515;
   --color-bg-cards: #222222;

@@ -1,8 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Header.module.css'
 import MobileMenu from './MobileMenu'
-import LogoIcon from '@/public/images/logo-51.svg'
-import BookNowButton from '../shared/BookNowButton/BookNowButton'
 
 interface HeaderProps {
   currentPage?: string
@@ -16,7 +15,13 @@ export default function Header({ currentPage }: HeaderProps) {
           <MobileMenu currentPage={currentPage} />
           <div className={styles.logo}>
             {/* <span className={styles.logoText}>Автосервис</span> */}
-            <LogoIcon className={styles.logoImage} />
+            <Image 
+              src="/images/logo-sfera-auto-removebg-preview.png" 
+              alt="Логотип Сфера Авто" 
+              width={300} 
+              height={100} 
+              className={styles.logoImage}
+            />
           </div>
           
           <nav className={styles.navigation}>
