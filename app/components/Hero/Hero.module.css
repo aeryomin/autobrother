@@ -154,7 +154,6 @@
   }
 
   .content {
-    /* margin-top: 2rem; */
     justify-content: flex-start;
     margin-top: 0;
   }
@@ -184,6 +183,10 @@
 
   .content {
     margin-top: 0;
-    justify-content: flex-start;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-left: 2rem;
   }
 } 
