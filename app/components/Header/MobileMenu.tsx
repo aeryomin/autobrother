@@ -53,13 +53,14 @@ export default function MobileMenu({ currentPage }: MobileMenuProps) {
         <div className={styles.mobileMenuContent}>
           <div className={styles.mobileLogo}>
             <Image
-              src="/images/logo.svg"
-              alt="АвтоБрат Рыбинск"
-              width={40}
+              src="/images/logo-sfera-auto-removebg-preview.png"
+              alt="Ваш автосервис"
+              width={120}
               height={40}
               priority
+              style={{ objectFit: 'contain' }}
             />
-            <span>АвтоБрат</span>
+            <span>Ваш автосервис</span>
           </div>
 
           <div className={styles.mobileContacts}>
@@ -77,18 +78,7 @@ export default function MobileMenu({ currentPage }: MobileMenuProps) {
             </div>
           </div>
 
-          <div className={styles.mobileSearch}>
-            <div className={styles.searchContainer}>
-              <input
-                type="text"
-                placeholder="Поиск услуг..."
-                className={styles.searchInput}
-              />
-              <button className={styles.searchButton}>
-                <i className="fas fa-search"></i>
-              </button>
-            </div>
-          </div>
+
 
           <nav className={styles.mobileNav}>
             <Link href="/" className={`${styles.mobileNavLink} ${currentPage === 'home' ? styles.active : ''}`}>
