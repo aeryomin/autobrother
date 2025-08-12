@@ -5,7 +5,7 @@ import { useState, useRef, FormEvent } from 'react'
 import styles from './Booking.module.css'
 import Popup from '../components/shared/Popup/Popup'
 import { formatPhone } from '../utils/formatPhone'
-import { postBookingRequest } from '../services/booking'
+import { BookingData, postBookingRequest } from '../services/booking'
 
 export default function Booking() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -33,13 +33,13 @@ export default function Booking() {
 
     const form = e.currentTarget
     const formData = new FormData(form)
-    const data = {
+    const data: BookingData = {
       name: formData.get('name'),
       phone: phone, // используем отформатированный номер
       car: formData.get('car'),
       service: formData.get('service'),
-      date: formData.get('date'),
-      time: formData.get('time'),
+      // date: formData.get('date'),
+      // time: formData.get('time'),
       comment: formData.get('comment'),
     }
 
@@ -147,7 +147,7 @@ export default function Booking() {
             </select>
           </div>
 
-          <div className={styles.formGroup}>
+          {/* <div className={styles.formGroup}>
             <label htmlFor="date" className={styles.label}>Дата</label>
             <input 
               type="date" 
@@ -157,9 +157,9 @@ export default function Booking() {
               min={new Date().toISOString().split('T')[0]}
               required
             />
-          </div>
+          </div> */}
 
-          <div className={styles.formGroup}>
+          {/* <div className={styles.formGroup}>
             <label htmlFor="time" className={styles.label}>Время</label>
             <input 
               type="time" 
@@ -170,7 +170,7 @@ export default function Booking() {
               max="21:00"
               required
             />
-          </div>
+          </div> */}
 
           <div className={styles.formGroup}>
             <label htmlFor="comment" className={styles.label}>Комментарий</label>

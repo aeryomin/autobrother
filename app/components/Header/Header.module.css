@@ -288,7 +288,7 @@
 
   .mobileNavLink:hover,
   .mobileNavLink.active {
-    color: var(--color-white);
+    color: var(--color-gray-darker);
   }
 
   .bookingButton {

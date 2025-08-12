@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     const { name, phone, car, service, date, time, comment } = data
 
     // Валидация обязательных полей
-    if (!name || !phone || !car || !service || !date || !time) {
+    if (!name || !phone || !car || !service) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -75,19 +75,19 @@ export async function POST(request: Request) {
       )
     }
 
-    if (!validateDate(date)) {
-      return NextResponse.json(
-        { error: 'Date cannot be in the past' },
-        { status: 400 }
-      )
-    }
+    // if (!validateDate(date)) {
+    //   return NextResponse.json(
+    //     { error: 'Date cannot be in the past' },
+    //     { status: 400 }
+    //   )
+    // }
 
-    if (!validateTime(time)) {
-      return NextResponse.json(
-        { error: 'Service hours: 9:00 - 21:00' },
-        { status: 400 }
-      )
-    }
+    // if (!validateTime(time)) {
+    //   return NextResponse.json(
+    //     { error: 'Service hours: 9:00 - 21:00' },
+    //     { status: 400 }
+    //   )
+    // }
 
     // Проверяем SMTP настройки
     if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
@@ -132,8 +132,6 @@ export async function POST(request: Request) {
         <p><strong>Телефон:</strong> ${phone}</p>
         <p><strong>Автомобиль:</strong> ${car}</p>
         <p><strong>Услуга:</strong> ${service}</p>
-        <p><strong>Дата:</strong> ${date}</p>
-        <p><strong>Время:</strong> ${time}</p>
         <p><strong>Комментарий:</strong> ${comment || 'Нет комментария'}</p>
         <p><strong>IP адрес:</strong> ${ip}</p>
         <p><strong>Время заявки:</strong> ${new Date().toLocaleString('ru-RU')}</p>
