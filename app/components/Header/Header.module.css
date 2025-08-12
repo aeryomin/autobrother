@@ -140,6 +140,23 @@
     z-index: 1002;
     padding: 0;
     flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  .burgerButton i {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .burgerButton:hover {
+    transform: scale(1.1);
+  }
+
+  .burgerButton.active {
+    transform: rotate(180deg);
+  }
+
+  .burgerButton.active i {
+    transform: rotate(-180deg);
   }
 
   .mobileMenu {
