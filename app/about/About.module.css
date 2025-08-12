@@ -66,6 +66,7 @@
 
 .textContent {
   margin: 0 2rem;
+  padding: 0 10px;
 }
 
 .textContent h2 {
@@ -73,6 +74,7 @@
   font-weight: 700;
   margin-bottom: 30px;
   color: var(--color-white);
+  text-align: center;
 }
 
 .textContent p {
@@ -80,6 +82,8 @@
   line-height: 1.8;
   color: var( --color-white);
   margin-bottom: 20px;
+  text-align: justify;
+  padding: 0 10px;
 }
 
 .imageContainer {
@@ -108,7 +112,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 60px;
-  color: #333;
+  color: var(--color-gray);
 }
 
 .valuesGrid {
@@ -186,6 +190,11 @@
   .sectionContent {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  
+  .textContent {
+    margin: 0 1rem;
+    padding: 0 5px;
   }
   
   .textContent h2 {
