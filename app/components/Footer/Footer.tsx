@@ -34,17 +34,14 @@ export default function Footer() {
 
           {/* Социальные сети */}
           <div className={styles.social}>
+            <a href="#" className={styles.socialLink} aria-label="ВКонтакте">
+              <i className="fab fa-vk"></i>
+            </a>
             <a href="#" className={styles.socialLink} aria-label="Facebook">
               <i className="fab fa-facebook-f"></i>
             </a>
             <a href="#" className={styles.socialLink} aria-label="Instagram">
               <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className={styles.socialLink} aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" className={styles.socialLink} aria-label="YouTube">
-              <i className="fab fa-youtube"></i>
             </a>
           </div>
         </div>

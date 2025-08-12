@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className={styles.heroContent}>
           <h1 className={styles.title}>О нас</h1>
           <p className={styles.subtitle}>
-            Автосервис &ldquo;АвтоБрат&rdquo; - ваш надежный партнер в обслуживании автомобиля
+            Автосервис &ldquo;SferaAuto&rdquo; - ваш надежный партнер в обслуживании автомобиля
           </p>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
           <div className={styles.valuesGrid}>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <Image src="/images/guarantee.svg" alt="Качество" width={60} height={60} />
+                <Image src="/icons/quality.svg" alt="Качество" width={60} height={60} />
               </div>
               <h3>Качество</h3>
               <p>Мы не идем на компромиссы в вопросах качества. Каждая работа выполняется 
@@ -72,7 +72,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <Image src="/images/honesty.svg" alt="Честность" width={60} height={60} />
+                <Image src="/icons/honesty.svg" alt="Честность" width={60} height={60} />
               </div>
               <h3>Честность</h3>
               <p>Прозрачное ценообразование, честная диагностика и рекомендации. 
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <Image src="/images/speed.svg" alt="Скорость" width={60} height={60} />
+                <Image src="/icons/speed-2.svg" alt="Скорость" width={60} height={60} />
               </div>
               <h3>Скорость</h3>
               <p>Ценим время наших клиентов. Выполняем работы в согласованные сроки 
@@ -88,9 +88,9 @@ export default function AboutPage() {
             </div>
             <div className={styles.value}>
               <div className={styles.valueIcon}>
-                <Image src="/images/customer.svg" alt="Клиентоориентированность" width={60} height={60} />
+                <Image src="/icons/focus.svg" alt="Клиентоориентированность" width={60} height={60} />
               </div>
-              <h3>Клиентоориентированность</h3>
+              <h3>Забота о клиенте</h3>
               <p>Индивидуальный подход к каждому клиенту, гибкие условия работы 
                  и готовность пойти навстречу в сложных ситуациях.</p>
             </div>

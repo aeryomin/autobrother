@@ -3,8 +3,8 @@ export interface BookingData {
   phone: string;
   car: FormDataEntryValue | null;
   service: FormDataEntryValue | null;
-  date: FormDataEntryValue | null;
-  time: FormDataEntryValue | null;
+  // date: FormDataEntryValue | null;
+  // time: FormDataEntryValue | null;
   comment: FormDataEntryValue | null;
 }
 
