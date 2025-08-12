@@ -39,11 +39,11 @@ export default function MobileMenu({ currentPage }: MobileMenuProps) {
     <>
       <button 
         ref={buttonRef}
-        className={styles.burgerButton}
+        className={`${styles.burgerButton} ${isOpen ? styles.active : ''}`}
         onClick={toggleMenu}
-        aria-label="Открыть меню"
+        aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
       >
-        <i className="fas fa-bars"></i>
+        <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'}`}></i>
       </button>
 
       <div 
