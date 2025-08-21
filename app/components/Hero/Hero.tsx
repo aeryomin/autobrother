@@ -17,9 +17,9 @@ export default function Hero() {
       </div>
 
       <div className={styles.content}>
-        <h1 className={styles.title}>
+        {/* <h1 className={styles.title}>
           Не мы сломали, <br /> но мы починим!
-        </h1>
+        </h1> */}
         <div className={styles.buttons}>
           <BookNowButton className={styles.primaryButton} />
         </div>
